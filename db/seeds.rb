@@ -1,4 +1,6 @@
 
+puts "Cleaning the DB..."
+Car.destroy_all
 
 
 bruce = Owner.create!(nickname: "Batman")
@@ -27,3 +29,5 @@ Car.create!(
   fuel: "Diesel",
   owner: clark
 )
+
+puts "Done! #{Car.count} created"
