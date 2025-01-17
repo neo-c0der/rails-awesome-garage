@@ -11,8 +11,18 @@
 
 <h1>Awesome Garage</h1>
 
-<ul>
+<div class="card-trip">
   <% @cars.each do |car| %>
-    <li><%= car.brand %></li>
+  <div class="card-car-infos">
+    <div>
+      <h2><%= car.brand %></h2>
+      <h3><%= car.model %></h3>
+    </div>
+    <img src="<%= car.image_url%>"/>
+    <div class="card-comment">
+      <h3>comment</h3>
+      <p><%= car.owner.nickname %></p>
+    </div>
+  </div>
   <% end %>
-</ul>
+</div>
